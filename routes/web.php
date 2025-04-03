@@ -35,6 +35,9 @@ Route::group([ 'as' => 'admin.', 'prefix'=> 'admin', 'namespace' => 'Admin', 'mi
     Route::get('/vehicles', [App\Http\Controllers\VehicleController::class, 'index'])->name('vehicles');
     Route::post('/vehicle/add', [App\Http\Controllers\VehicleController::class, 'store'])->name('vehicle-add');
     Route::get('/vehicle/delete/{id}', [App\Http\Controllers\VehicleController::class, 'destroy'])->name('vehicle-delete');
+    Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user');
+    Route::post('/user/store', [App\Http\Controllers\UserController::class, 'store'])->name('user-store');
+
 });
 
 

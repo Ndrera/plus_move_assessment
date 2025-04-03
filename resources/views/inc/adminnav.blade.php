@@ -14,6 +14,7 @@
             <a class="list-group-item list-group-item-action {{ Request::is('admin/shipping/status/6') ? 'active' : '' }}" href="{{ route('admin.shipping-status', 6) }}">{{ __('Delivered') }}</a>
             <a class="list-group-item list-group-item-action {{ Request::is('admin/shipping/status/7') ? 'active' : '' }}" href="{{ route('admin.shipping-status', 7) }}">{{ __('Corperate') }}</a>
             <a class="list-group-item list-group-item-action {{ Request::is('admin/vehicles') ? 'active' : '' }}" href="{{ route('admin.vehicles') }}">{{ __('Vehicle') }}</a>
+            <a class="list-group-item list-group-item-action {{ Request::is('admin/user') ? 'active' : '' }}" href="{{ route('admin.user') }}">{{ __('Create User') }}</a>
         </ul>
     </div>
 </div>
