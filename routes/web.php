@@ -17,15 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Auth::routes([ 'register' => false]);
-Auth::routes();
+Auth::routes([ 'register' => false]);
 
 ####
 # Admin
 #
 Route::group([ 'as' => 'admin.', 'prefix'=> 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin'] ], function(){
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/courier', [App\Http\Controllers\CourierController::class, 'index'])->name('courier');
     Route::post('/courier/store', [App\Http\Controllers\CourierController::class, 'store'])->name('store');
     Route::get('/shippings', [App\Http\Controllers\CourierController::class, 'shippings'])->name('shippings');
@@ -44,7 +43,7 @@ Route::group([ 'as' => 'admin.', 'prefix'=> 'admin', 'namespace' => 'Admin', 'mi
 #
 Route::group([ 'as' => 'warehouse.', 'prefix'=> 'warehouse', 'namespace' => 'Warehouse', 'middleware' => ['auth', 'warehouse'] ], function(){
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/shipping/status/{id}', [App\Http\Controllers\CourierController::class, 'getShippingByStatus'])->name('shipping-status');
     Route::get('/shipping/show/{id}', [App\Http\Controllers\CourierController::class, 'show'])->name('show');
     Route::post('/shipping/edit', [App\Http\Controllers\CourierController::class, 'update'])->name('edit');
@@ -57,7 +56,7 @@ Route::group([ 'as' => 'warehouse.', 'prefix'=> 'warehouse', 'namespace' => 'War
 #
 Route::group([ 'as' => 'driver.', 'prefix'=> 'driver', 'namespace' => 'Driver', 'middleware' => ['auth', 'driver'] ], function(){
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/courier', [App\Http\Controllers\CourierController::class, 'index'])->name('courier');
     Route::post('/courier/store', [App\Http\Controllers\CourierController::class, 'store'])->name('store');
     Route::get('/shipping/status/{id}', [App\Http\Controllers\CourierController::class, 'getShippingByStatus'])->name('shipping-status');
