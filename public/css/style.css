@@ -1,0 +1,106 @@
+/* This is my custom css file */
+
+.bg-none {
+    background-color: none !important;
+}
+
+
+.custom-link:hover {
+    text-decoration: none !important;
+}
+
+@media (max-width: 576px) {
+    .display-none {
+      display: none;
+    }
+}
+
+/* Custom css for filtering table rows */
+
+#myInput {
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 5px 20px 5px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+
+  .img-custom {
+      width: 150px !important;
+      height: 80px !important;
+  }
+
+
+
+  .badge {
+    display: inline-block !important;
+    padding: 0.25em 0.4em !important;
+    font-size: 75% !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: baseline !important;
+    border-radius: 0.25rem !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  }
+
+  .badge-pill {
+    padding-right: 0.6em !important;
+    padding-left: 0.6em !important;
+    border-radius: 10rem !important;
+  }
+
+  .badge-primary {
+    color: #fff !important;
+    background-color: #3490dc !important;
+  }
+
+
+
+  /*OUTLINE*/
+  .btn-outline-light {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  
+  .btn-outline-light:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  
+  .btn-outline-light:focus,
+  .btn-outline-light.focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  }
+  
+  .btn-outline-light.disabled,
+  .btn-outline-light:disabled {
+    color: #f8f9fa;
+    background-color: transparent;
+  }
+  
+  .btn-outline-light:not(:disabled):not(.disabled):active,
+  .btn-outline-light:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-light.dropdown-toggle {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  
+  .btn-outline-light:not(:disabled):not(.disabled):active:focus,
+  .btn-outline-light:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-light.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  }
+
+
+
+  .float-right {
+    float: right !important;
+  }
+
+  
